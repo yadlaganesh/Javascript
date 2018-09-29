@@ -1,0 +1,29 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px/1.6;
+	background: #fafafa;		
+	
+	margin: 20px auto;
+	max-width: 80%;
+	padding: 20px;
+}
+pre{
+	background: #fff;
+	padding: 10px;
+	box-shadow: 0px 2px 2px 2px #ccc;
+	margin: 0px;
+}
+h3,ul{
+	padding: 10px;
+    background: #2196f3;
+    box-shadow: 0px 2px 2px 1px #2196f3;
+    margin: 0px 0px 2px 0px;
+    color: #fff;
+}
+ul{
+	background: #fff;
+	color: #555;
+	box-shadow: 0px 2px 2px 1px #ccc;
+	margin: 0px;
+	list-style: none;
+}

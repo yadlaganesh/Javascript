@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Js Basics Challenge</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+	<body>
+		<h3>Js Basics Challenge</h3>
+		<pre>
+		var John = {
+			fullName : 'John',
+			bills : [124,48,268,180,42],
+			calcTip : function(){
+				this.tips = [];
+				this.totalAmount = [];
+				for(var i=0;i<this.bills.length;i++){
+					if(this.bills[i] < 50){
+						this.tips.push(this.bills[i]*(20/100));
+						this.totalAmount.push(this.bills[i]+this.bills[i]*(20/100))
+					}if(this.bills[i]> 50 && this.bills[i]< 200){
+						this.tips.push(this.bills[i]*(15/100));
+						this.totalAmount.push(this.bills[i]+this.bills[i]*(15/100)) 
+					}if(this.bills[i] > 200){
+						this.tips.push(this.bills[i]*(10/100)); 
+						this.totalAmount.push(this.bills[i]+this.bills[i]*(15/100))
+					}
+				}
+			}
+		};
+		John.calcTip();
+		console.log(John);
+		</pre>
+		<script type="text/javascript">
+			var John = {
+				fullName : 'John',
+				bills : [124,48,268,180,42],
+				calcTip : function(){
+					this.tips = [];
+					this.totalAmount = [];
+					for(var i=0;i<this.bills.length;i++){
+						if(this.bills[i] < 50){
+							this.tips.push(this.bills[i]*(20/100));
+							this.totalAmount.push(this.bills[i]+this.bills[i]*(20/100))
+						}if(this.bills[i]> 50 && this.bills[i]< 200){
+							this.tips.push(this.bills[i]*(15/100));
+							this.totalAmount.push(this.bills[i]+this.bills[i]*(15/100)) 
+						}if(this.bills[i] > 200){
+							this.tips.push(this.bills[i]*(10/100)); 
+							this.totalAmount.push(this.bills[i]+this.bills[i]*(15/100))
+						}
+					}
+				}
+			};
+			John.calcTip();
+			console.log(John);
+		</script>
+	</body>
+</html>

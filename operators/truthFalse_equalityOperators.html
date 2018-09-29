@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Js Equality/Truthy Falsy Operators</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+	<body>
+		<h3>Equality/Truthy Falsy Operators</h3>
+		
+		<pre>
+	var height;
+	height = 170;
+	if(height || height === 0){
+		console.log('Variable is defined');
+	}else{
+		console.log('Variable is not been defined');
+	}
+
+	//Equality Operator
+	if(height == '170'){
+		console.log('The == Operator does not coercion');
+	}	
+	
+		</pre>
+		<script type="text/javascript">
+			var height;
+			height = 170;
+			if(height || height === 0){
+				console.log('Variable is defined');
+			}else{
+				console.log('Variable is not been defined');
+			}
+
+			//Equality Operator
+			if(height == '170'){
+				console.log('The == Operator does not coercion');
+			}
+
+		</script>
+	</body>
+</html>

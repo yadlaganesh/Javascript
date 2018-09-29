@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Js Ternary Operator/ Switch</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+	<body>
+		<h3>Ternary Operator/ Switch</h3>
+		
+		<pre>
+	var name = 'Ganesh';
+	var age = 16;
+
+	// ternary operator
+	age >= 18 ? console.log(name+'is a boy'):console.log(name+'is a young boy');
+
+	var drink = age >= 18 ? 'beer' : 'juice';
+	console.log(drink);
+
+
+	//switch operator
+	var job = 'teacher';
+	switch(job){ 
+		case 'teacher' :
+		console.log(name+' is a teacher');
+		break;
+		case 'designer' :
+		console.log(name+' is a designer');
+		break;
+		case 'driver' :
+		console.log(name+' is a driver');
+		break;
+		default:
+			console.log(name+ ' is a does something...!');
+	}		
+	
+		</pre>
+		<script type="text/javascript">
+
+			var name = 'Ganesh';
+			var age = 16;
+
+			// ternary operator
+			age >= 18 ? console.log(name+'is a boy'):console.log(name+'is a young boy');
+
+			var drink = age >= 18 ? 'beer' : 'juice';
+			console.log(drink);
+
+
+			//switch operator
+			var job = 'teacher';
+			switch(job){
+				case 'teacher' :
+				console.log(name+' is a teacher');
+				break;
+				case 'designer' :
+				console.log(name+' is a designer');
+				break;
+				case 'driver' :
+				console.log(name+' is a driver');
+				break;
+				default:
+					console.log(name+ ' is a does something...!');
+			}
+		</script>
+	</body>
+</html>

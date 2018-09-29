@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Js Variables</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+	<body>
+		<h3>Variable</h3>
+		<p>variable is a container and stores a values in order to use over and over in our code.</p>
+
+		<h3>Variable Data Types</h3>
+		<ul>
+			<li><b>Number : </b>Floating point numbers , for decimals and integers</li>
+			<li><b>String : </b>Sequence of characters for text</li>
+			<li><b>Boolean : </b>Logical data type that can be <b>True</b>or <b>False</b></li>
+			<li><b>Undefined : </b>A variable does not have a value yet</li>
+			<li><b>Null : </b>non-existent</li>
+		</ul>
+		<pre>
+	/*******************************************
+	Variables and Data types
+
+	********************************************/
+	var age = 26; // number
+
+	var firstname = 'Ganesh'; // string
+
+	var qualified = true; // boolean
+
+	var job;
+	console.log(job); // undefined
+
+	//variable sholud starts _with underscore, dollar or name 
+	// also standard names are also not valid like 'if'
+	//var 3year = 3; // invalid should not start with letter;
+	// var gani/test = 7; // invalid there '/
+
+
+
+	/********************************************
+	Type coercion and Variable mutation
+
+	*********************************************/
+
+	var firstname = 'Ganesh';
+	var age = 26;
+
+	var status = firstname + '' + age;
+	//here status is string and age also converted to string that is called coercion
+	console.log(status);
+	console.log(typeof status); 
+
+	var age = 'Twenty six';
+	// here age is string converted from number this is called variable mutation
+
+	//var lastname = prompt('What is your last name ?');
+	//alert('Your fullname is '+firstname+''+lastname);
+	console.log(firstname+''+ lastname);
+
+		</pre>
+		<script type="text/javascript">
+
+			/***************
+				Variables and Data types
+
+			****************/
+				var age = 26; // number
+
+				var firstname = 'Ganesh'; // string
+				
+				var qualified = true; // boolean
+
+				var job;
+				console.log(job); // undefined
+				
+				//variable sholud starts _with underscore, dollar or name 
+				// also standard names are also not valid like 'if'
+				//var 3year = 3; // invalid should not start with letter;
+				// var gani/test = 7; // invalid there '/
+
+
+
+			/***************************
+				Type coercion and Variable mutation
+
+			***************************/
+
+			var firstname = 'Ganesh';
+			var age = 26;
+
+			var status = firstname + '' + age;
+			//here status is string and age also converted to string that is called coercion
+			console.log(status);
+			console.log(typeof status); 
+
+			var age = 'Twenty six';
+			// here age is string converted from number this is called variable mutation
+
+			//var lastname = prompt('What is your last name ?');
+			//alert('Your fullname is '+firstname+''+lastname);
+			console.log(firstname+''+ lastname);
+		</script>
+	</body>
+</html>

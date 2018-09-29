@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Js Arrays</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+	<body>
+		<h3>Arrays</h3>
+		
+		<pre>
+			//array initializing
+			var names = ['ganesh', 'suresh', 'nikesh'];
+			var years = new Array(1990, 1991, 1992);
+			names[5] = 'sarvesh';
+			names[names.length] = 'Good';
+
+			//Different Data types
+			var jobs = ['it','java', 'anguluar', 1995, false];
+			jobs.push('colors');
+			console.log(jobs);
+
+			//mute array data
+			console.log(names);
+			console.log(names.length);
+			console.log(names[0]);
+
+
+			//Array Methods
+			var namesMethods = ['ganesh', 'suresh', 1990, 'nikesh', false];
+			console.log(namesMethods);
+			namesMethods.push('color');
+			namesMethods.unshift('title');
+			namesMethods.pop();
+			namesMethods.shift();
+			console.log(namesMethods);
+			console.log(namesMethods.indexOf(1990));
+			console.log(namesMethods.indexOf(24)); // if it is not in array returns -1
+
+			var member = namesMethods.indexOf('sarvesh') === -1 ? 'sarvesh is not a member' : 'yes he is a member';	
+			console.log(member);
+		</pre>
+		<script type="text/javascript">
+			
+			//array initializing
+			var names = ['ganesh', 'suresh', 'nikesh'];
+			var years = new Array(1990, 1991, 1992);
+			names[5] = 'sarvesh';
+			names[names.length] = 'Good';
+
+			//Different Data types
+			var jobs = ['it','java', 'anguluar', 1995, false];
+			jobs.push('colors');
+			console.log(jobs);
+
+			//mute array data
+			console.log(names);
+			console.log(names.length);
+			console.log(names[0]);
+
+
+			//Array Methods
+			var namesMethods = ['ganesh', 'suresh', 1990, 'nikesh', false];
+			console.log(namesMethods);
+			namesMethods.push('color');
+			namesMethods.unshift('title');
+			namesMethods.pop();
+			namesMethods.shift();
+			console.log(namesMethods);
+			console.log(namesMethods.indexOf(1990));
+			console.log(namesMethods.indexOf(24)); // if it is not in array returns -1
+
+			var member = namesMethods.indexOf('sarvesh') === -1 ? 'sarvesh is not a member' : 'yes he is a member';	
+			console.log(member);	
+		</script>
+	</body>
+</html>

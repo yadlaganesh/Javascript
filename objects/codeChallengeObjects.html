@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Js Objects Code Challenge</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+	<body>
+		<h3>Objects Code Challenge</h3>
+		<pre>
+		var Mark = {
+			fullName : 'Mark',
+			mass: 25,
+			height: 1.65,
+			calcBMI : function(){
+				this.bmi = (this.mass / (this.height*this.height));
+				return this.bmi;
+			}
+		};
+		var John = {
+			fullName : 'John',
+			mass: 23,
+			height: 1.64,
+			calcBMI : function(){
+				this.bmi = (this.mass / (this.height*this.height));
+				return this.bmi;
+			}
+		};
+		John.calcBMI();
+		Mark.calcBMI();
+		console.log(John.bmi);
+		console.log(Mark.bmi);
+		if(John.bmi > Mark.bmi){
+			console.log(John.fullName+"has high BMI");
+		}else if(Mark.bmi > John.bmi){
+			console.log(Mark.fullName+'has high BMI');
+		}else{
+			console.log('They have same BMI');
+		}
+		</pre>
+		<script type="text/javascript">
+			var Mark = {
+				fullName : 'Mark',
+				mass: 25,
+				height: 1.65,
+				calcBMI : function(){
+					this.bmi = (this.mass / (this.height*this.height));
+					return this.bmi;
+				}
+			};
+			var John = {
+				fullName : 'John',
+				mass: 23,
+				height: 1.64,
+				calcBMI : function(){
+					this.bmi = (this.mass / (this.height*this.height));
+					return this.bmi;
+				}
+			};
+			John.calcBMI();
+			Mark.calcBMI();
+			console.log(John.bmi);
+			console.log(Mark.bmi);
+			if(John.bmi > Mark.bmi){
+				console.log(John.fullName+"has high BMI");
+			}else if(Mark.bmi > John.bmi){
+				console.log(Mark.fullName+'has high BMI');
+			}else{
+				console.log('They have same BMI');
+			}
+		</script>
+	</body>
+</html>

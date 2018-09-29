@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Js Functions</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+	<body>
+		<h3>Functions</h3>
+		
+		<pre>
+	
+		</pre>
+		<script type="text/javascript">
+
+		function calculateAge(birthYear){
+			return 2018 - birthYear;
+		}
+		var  ageGanesh = calculateAge(1992);
+		var  ageSuresh = calculateAge(1990);
+		var  ageNikesh = calculateAge(1998);
+		console.log(ageGanesh, ageSuresh, ageNikesh);
+
+
+		function untilYourRetirement(birthYear, name){
+			var age = calculateAge(birthYear);
+			var retirement = 65 - age;
+			if(retirement > 0){
+				console.log(name+'retires in '+retirement+'years');
+			}else{
+				console.log('You already retired...'+name);
+			}
+			
+		}
+		untilYourRetirement(1990, 'Suresh');
+		untilYourRetirement(1992, 'Ganesh');
+		untilYourRetirement(1998, 'Nikesh');
+		untilYourRetirement(1940, 'Jaggubai');
+		</script>
+	</body>
+</html>

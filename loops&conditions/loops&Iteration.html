@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Js Loops and Iteration</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+	<body>
+		<h3>Js Loops and Iteration</h3>
+		<pre>
+		var Names = ["Ganesh", "Suresh", "It", 1990, false, 'blue'];
+		for(var i=0;i < Names.length;i++){
+			console.log(Names[i]);
+		}
+		console.log('**********for loop end************');
+
+		// while loop
+		var i=0;
+		while(i < Names.length){
+			console.log(Names[i]);
+			i++;
+		}
+		console.log('***********while loop end***********');
+
+		//continue and break
+		for(var i=0;i < Names.length;i++){
+			if(typeof Names[i] !== 'string') {
+				continue;
+			}
+			console.log(Names[i]);
+		}
+		for(var i=0;i < Names.length;i++){
+			if(typeof Names[i] !== 'string') {
+				break;
+			}
+			console.log(Names[i]);
+		}
+		console.log('***********continue and break***********');
+		for(var i < Names.length - 1;i>Names.length;i--){
+			console.log(i);
+		}
+		console.log('*********** Reverse loop ***********');
+		</pre>
+		<script type="text/javascript">
+		/*-- Loops and Iteration --*/
+		/*for(var i=0;i<10;i++){
+			console.log(i);
+		}*/
+		// for loop
+		var Names = ["Ganesh", "Suresh", "It", 1990, false, 'blue'];
+		for(var i=0;i < Names.length;i++){
+			console.log(Names[i]);
+		}
+		console.log('********** for loop end ************');
+
+		// while loop
+		var i=0;
+		while(i < Names.length){
+			console.log(Names[i]);
+			i++;
+		}
+		console.log('*********** while loop end ***********');
+
+		//continue and break
+		for(var i=0;i < Names.length;i++){
+			if(typeof Names[i] !== 'string') {
+				continue;
+			}
+			console.log(Names[i]);
+		}
+		for(var i=0;i < Names.length;i++){
+			if(typeof Names[i] !== 'string') {
+				break;
+			}
+			console.log(Names[i]);
+		}
+		console.log('*********** continue and break ***********');
+		for(var i = Names.length - 1; i >= 0;i--){
+			console.log(i); 
+		}
+		console.log('*********** Reverse loop ***********');
+		</script>
+	</body>
+</html>

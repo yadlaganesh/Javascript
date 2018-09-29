@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Js Function Expressions & Statements</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+	<body>
+		<h3>Function Statements & Expressions</h3>
+		
+		<pre>
+	//function decloration does not give immediate result
+	function WhatDoyou(job,name){
+		return (name+'doing'+job);
+	}
+	console.log(WhatDoyou('dev','suresh'));
+
+
+	//function expression will give immediate result
+	var result = function(job, name){
+		return (name+'doing'+job);
+	}
+	console.log(result('developer', 'ganesh'));
+		</pre>
+		<script type="text/javascript">
+			//function decloration does not give immediate result
+			function WhatDoyou(job,name){
+				return (name+'doing'+job);
+			}
+			console.log(WhatDoyou('dev','suresh'));
+
+
+			//function expression will give immediate result
+			var result = function(job, name){
+				return (name+'doing'+job);
+			}
+			console.log(result('developer', 'ganesh'));
+		</script>
+	</body>
+</html>

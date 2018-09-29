@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Js Operators</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+	<body>
+		<h3>Operators</h3>
+		<pre>
+	
+
+	// Math Operators
+	var now = 2018;
+	var SureshAge = now - 26;
+	var NikeshAge = now - 22;
+	console.log(SureshAge);
+	console.log(NikeshAge);
+	console.log(now * 2);
+	console.log(now / 2);
+
+	//Logical Operators
+	var olderAge = SureshAge > NikeshAge;
+	console.log(olderAge);
+	console.log(typeof olderAge);
+
+	// more operators
+	x *= 2;
+	console.log(x);
+	x += 10;
+	console.log(x);
+	x++;
+	console.log(x);
+	--x;
+	console.log(x);
+
+
+	/****************************
+		Operator Precedence
+
+	*****************************/
+	var yearGanesh = 1992;
+	var fullAge = 18;
+	var isFullAge = now - yearGanesh >= fullAge; // - has a high precidence and after >= 
+	console.log(isFullAge);
+	
+
+	var average  = (SureshAge + NikeshAge) / 2; // grouping has high precidence
+	console.log(average);
+
+
+	//multiple assignment
+	var x,y;
+	x = (3 + 5) * 4 - 6; //8 * 4 - 6 // 32 - 6 // 28
+	console.log(x);
+
+	
+		</pre>
+		<script type="text/javascript">
+			/****************************
+				Operators
+
+			*****************************/
+
+			// Math Operators
+			var now = 2018;
+			var SureshAge = now - 26;
+			var NikeshAge = now - 22;
+			console.log(SureshAge);
+			console.log(NikeshAge);
+			console.log(now * 2);
+			console.log(now / 2);
+
+			//Logical Operators
+			var olderAge = SureshAge > NikeshAge;
+			console.log(olderAge);
+			console.log(typeof olderAge);
+
+			// more operators
+			x *= 2;
+			console.log(x);
+			x += 10;
+			console.log(x);
+			x++;
+			console.log(x);
+			--x;
+			console.log(x);
+
+			/****************************
+				Operator Precedence
+
+			*****************************/
+			var yearGanesh = 1992;
+			var fullAge = 18;
+			var isFullAge = now - yearGanesh >= fullAge; // - has a high precidence and after >= 
+			console.log(isFullAge);
+			
+
+			var average  = (SureshAge + NikeshAge) / 2; // grouping has high precidence
+			console.log(average);
+
+
+			//multiple assignment
+			var x,y;
+			x = (3 + 5) * 4 - 6; //8 * 4 - 6 // 32 - 6 // 28
+			console.log(x);
+
+			
+		</script>
+	</body>
+</html>
