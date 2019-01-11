@@ -1,0 +1,1390 @@
+<html>
+	<head>
+		<title>Js concepts </title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<style>
+			.box{
+				    background: #fff;
+					color: #555;
+					font-size: 16px;
+					box-shadow: 0px 2px 2px 2px #ccc;
+					font-family: 'Open Sans', sans-serif;
+					line-height: 1.8;
+					width: 75%;
+					margin: 10px auto;
+			}
+			.box h3{
+				padding: 10px;
+				background: #03A9F4;
+				color: #fff;
+			}
+			.box pre{
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		
+<div class="box">
+ <h3>Why Javascript</h3>
+<pre>
+ - show/hide/style web page elements in response to user's interaction with other elements on the web page.
+ - client side validation form fields
+ - Animation
+ - client side data exchange that does not require full page refreshes
+ - Recent versions of HTML and CSS  have simplified some of these tasks ex: form validation , animations etc.
+ 
+</pre>
+</div>
+<div class="box">
+<h3>Basic Javascript</h3>
+<pre> 
+ //alert
+ alert('hello') 
+ 
+ //confirm
+ confirm('are you going ?');
+ 
+ // prompt
+ var name = prompt('what is you name ?');
+ console.log(name);
+ 
+ //console log
+ console.log('this is from console...');
+ 
+ //Display date on console
+ var date  = new Date().toLocalString();
+ console.log(date);
+ 
+ //Display date on the webpage using DOM
+ document.querySelector('#display').textContent = date;
+ </pre>
+</div> 
+<div class="box">
+<h3>Variable Decloration</h3>
+<pre> 
+ var a = 10;
+ var b = 20;
+ var c = a + b;
+ console.log('The sum of two numbers is:'+c);
+ 
+	find biggest no in two
+	----------------------
+	var a = 100;
+	var b = 200;
+	if(a > b){
+		console.log('a is bigger than b');
+	}else{
+		console.log('b is bigger than a');
+	}
+</pre> 
+</div>
+<div class="box">
+<h3>Data types</h3>
+<pre> 
+ // undefined
+var abc;
+console.log('abc : ' + abc);
+
+// number
+var jsVersion = 5;
+console.log('jsVersion : ' + jsVersion);
+
+// boolean
+var isJSEasy = true;
+console.log('isJSEasy : ' + isJSEasy);
+
+// string
+var course = 'UI Technologies';
+console.log('course : ' + course);
+
+// null
+var dummy = null;
+console.log('dummy : ' + dummy);
+
+// Reassignment of variables
+var test;
+console.log('value : ' + test + ' type : ' + typeof test);
+
+test = 10;
+console.log('value : ' + test + ' type : ' + typeof test);
+
+test = true;
+console.log('value : ' + test + ' type : ' + typeof test);
+
+test = 'John';
+console.log('value : ' + test + ' type : ' + typeof test);
+
+test = null;
+console.log('value : ' + test + ' type : ' + typeof test);
+
+test = [];
+console.log('value : ' + test + ' type : ' + typeof test);
+
+test = {};
+console.log('value : ' + test + ' type : ' + typeof test);
+
+test = function () {};
+console.log('value : ' + test + ' type : ' + typeof test);
+ 
+</pre>
+</div>
+<div class="box">
+<h3>Operators</h3>
+<pre> 
+// Assignment operator =
+var file = 'JS Operators';
+console.log('file : ' + file);
+
+// Arithmetic operators + - * /
+var a = 10;
+var b = 20;
+var sum = a + b;
+console.log('Sum is : ' + sum);
+
+var sub = a - b;
+console.log('sub is : ' + sub);
+
+// Short hand math += , -= , *= , /=
+var x = 10;
+var y = 20;
+var add = 0;
+add = add + (x + y); // 0 + 10 + 20 = 30
+add += (x + y); // 30 + 10 + 20 = 60
+console.log(add); // 60
+
+// Conditional operators < , > , <= , >= , !==
+var age = 25;
+if(age > 18){
+    console.log('You are Major');
+}
+else{
+    console.log('You are minor');
+}
+
+// Unary Operator ++ , -- (pre , post)
+a = 10;
+a = a + 1;
+a += 1;
+a++;
+console.log(a); // 13
+
+// Logical operators && , ||
+var inRelation = true;
+var parentsAgreed = false;
+if(inRelation && parentsAgreed){
+    console.log('Get Marry Soon');
+}
+else{
+    console.log('Wait until the parents Agreed');
+}
+
+// String Concatenation Operator +
+var str = 10 + 20 + "10" + 20 + 10;
+console.log(str);
+
+var wish1 = "Good";
+var wish2 = "Morning";
+console.log(wish1 + " " + wish2);
+
+// Ternary operator (? :)
+age = 20;
+(age < 18) ? console.log('You are Minor') : console.log('You are Major');
+
+
+// Type of operator
+var test = 'ABC';
+console.log('value : ' + test + ' Type : ' + typeof  test);
+
+
+// == operator
+a = 10;
+b = "10";
+if(a == b){
+    console.log(' Both are Equal');
+}
+else{
+    console.log('Both are NOT Equal');
+}
+
+// === operator
+a = 10;
+b = "10";
+if(a === b){
+    console.log(' Both are Equal');
+}
+else{
+    console.log('Both are NOT Equal');
+}
+</pre>
+</div>
+<div class="box">
+<h3>Conditions</h3>
+<pre> 
+// If Else condition Example
+var courseCompleted = true ;
+var practiceCompleted = false;
+if(courseCompleted && practiceCompleted){
+    console.log('You will learn very soon...');
+}
+else if(courseCompleted && !practiceCompleted){
+    console.log('start practicing!!');
+}
+else{
+    console.log('Welcome to learning javascript');
+}
+
+// For loop Example to display from 1 - 10 values
+var output = '';
+for(var i = 1; i<= 10; i++){
+    if(i <= 9){
+        output = output + i + " , ";
+    }
+    else{
+        output = output + i ;
+    }
+}
+console.log(output);
+
+// While loop Example to display from 1 - 10 values
+output = '';
+i = 1;
+while(i <= 10){
+    if(i <= 9){
+        output = output + i + " - ";
+    }
+    else{
+        output = output + i ;
+    }
+    i++;
+}
+console.log(output);
+
+// Do while loop Example to display from 1 - 10 values
+output = '';
+i = 1;
+do{
+    if(i <= 9){
+        output = output + i + " * ";
+    }
+    else{
+        output = output + i ;
+    }
+    i++;
+}
+while(i <= 10);
+console.log(output);
+
+// Switch Statement Example
+var date = new Date().getDay();
+output = 'Today is : ';
+switch(date){
+    case 0:
+        output += 'Sunday';
+        break;
+    case 1:
+        output += 'Monday';
+        break;
+    case 2:
+        output += 'Tuesday';
+        break;
+    case 3:
+        output += 'Wednesday';
+        break;
+    case 4:
+        output += 'Thrusday';
+        break;
+    case 5:
+        output += 'Friday';
+        break;
+    case 6:
+        output += 'Saturday';
+        break;
+    default:
+        output += '';
+        break;
+}
+console.log(output);
+</pre>
+</div>
+
+<div class="box">
+<h3>Objects</h3>
+<pre> 
+// Create an object
+var fridge = {};
+fridge.fruits = 20;
+fridge.vegitbles = 40;
+
+// Access the object
+console.log(fridge);
+console.log('fruits : ' + fridge.fruits);
+
+// Object Literal
+var mobile = {
+    color : 'black',
+    company : 'Lenovo',
+    RAM : '3GB',
+    isInsured : false,
+    cost : 15000
+};
+console.log(mobile);
+
+// Access Using dot , [] notations
+console.log('Company :' + mobile.company); // Lenovo
+console.log('Company :' + mobile['company']); // Lenovo
+
+// Access Not Existing Property
+console.log('Capacity : ' + mobile.capacity); // undefined
+
+// Create a Nested Object
+var student = {
+    name : 'Ganesh',
+    age : 25,
+    course : 'Engineering',
+    address : {
+        city : 'Hyderabad',
+        state : 'Telangana',
+        country : 'India'
+    }
+};
+
+// Access the Object
+console.log(student); // student Obj
+console.log(student.address); // address Obj
+console.log(student.address.city); // Hyderabad
+
+// Add a property to Student Object
+student.address.street = 'Hightech city';
+console.log(student.address);
+
+// Delete an Object
+delete student.address; // address object is deleted
+console.log(student);
+
+</pre>
+</div>
+<div class="box">
+<h3>Arrays</h3>
+<pre> 
+// creation of arrays
+var array = [10,20,30,40,50];
+
+// Accessing an array and its properties
+console.log(array);
+console.log(array[1]); // 20
+
+// Access not existed property from an array
+console.log(array[100]); // undefined
+
+// Accessing length of an Array
+console.log('Length : ' + array.length);
+
+// reverse the array using reverse()
+array = [10,20,30,40,50];
+console.log('Before : ' + array);
+array.reverse();
+console.log('After : ' + array);
+
+// Remove the first value of the array: shift()
+array = [10,20,30,40,50];
+console.log('Before : ' + array);
+array.shift();
+console.log('After : ' + array);
+
+// Add value to front of the array:unshift()
+array = [10,20,30,40,50];
+console.log('Before : ' + array);
+array.unshift(100);
+console.log('After : ' + array);
+
+// Remove the last value of the array: pop()
+array = [10,20,30,40,50];
+console.log('Before : ' + array);
+array.pop();
+console.log('After : ' + array);
+
+// Add value the end of the array: push()
+array = [10,20,30,40,50];
+console.log('Before : ' + array);
+array.push(100);
+console.log('After : ' + array);
+
+// Remove an element from an Array , Arguments: colors.splice(pos,n):
+
+// splice(index);
+array = [10,20,30,40,50];
+console.log('Before : ' + array);
+array.splice(1);
+console.log('After : ' + array);
+
+// splice(index,no_of_elem);
+array = [10,20,30,40,50];
+console.log('Before : ' + array);
+array.splice(1,2);
+console.log('After : ' + array);
+
+// splice(index,1,replace_elem);
+array = [10,20,30,40,50];
+console.log('Before : ' + array);
+array.splice(1,1,80);
+console.log('After : ' + array);
+
+// Create a copy of an array. Typically assigned to a new variable:slice();
+var arr1 = [10,20,30,40,50];
+var arr2 = arr1.slice();
+arr1.splice(1);
+console.log('Array2 : ' + arr2);
+
+// indexOf()
+arr1 = [10,20,30,40,50];
+var value = 100;
+if(arr1.indexOf(value) === -1){
+    console.log('The ' + value + ' is Not Exists');
+}
+else{
+    console.log('The ' + value + ' is exists @ index : ' + arr1.indexOf(value));
+}
+
+// Join()
+array = [10,20,30,40,50];
+var str = array.join(" - ");
+console.log(str);
+</pre>
+</div>
+<div class="box">
+<h3>Functions</h3>
+<pre> 
+//creation of a simple function with no args and execute a function
+function greet() {
+    console.log('Good Morning');
+}
+greet();
+
+//creation of a simple function with args
+function greetArgs(name) {
+    console.log('Hello ' + name + ' Good Morning');
+}
+greetArgs('John');
+
+// executing a function with less number of params
+function greetLessArgs(name,age) {
+    console.log('Hello ' + name + ' You are ' + age + ' Years of Old!!');
+}
+greetLessArgs('John');
+
+//executing a function with more number of params
+function greetMoreArgs(name,age) {
+    console.log('Hello ' + name + ' You are ' + age + ' Years of Old!!');
+}
+greetMoreArgs('John',40,'Manager');
+
+//function overloading is not possible here
+
+
+// functions with return values
+function greetReturn(name) {
+    var greeting = "Good Morning " + name;
+    return greeting;
+}
+var msg  = greetReturn('John');
+console.log(msg);
+
+//function with empty return /no return
+function greetEmptyReturn(name) {
+    var greeting = "Good Morning " + name;
+    return;
+}
+msg = greetEmptyReturn('Williams');
+console.log(msg);
+
+// function Expressions with name and execution
+var greetFn = function(name) {
+    console.log(name + ' Iam from Function expression');
+};
+greetFn('John');
+
+// Functions as arguments with args args
+function greet1(name) {
+    console.log(name + ' Iam from Greet1');
+}
+function greet2(name) {
+    console.log(name + ' Iam from Greet2');
+}
+function greetCaller(fName,name) {
+    fName(name);
+}
+greetCaller(greet1,'Williams');
+
+// Functions in Objects and Execution
+var student = {
+    firstName : 'Arjun',
+    lastName : 'Reddy',
+    fullName : function() {
+        return this.firstName + " " + this.lastName;
+    }
+};
+console.log(student.fullName());
+
+// Coding Exercise 1
+/*
+Create an employee obj and address object in it. add a property called
+isFromState() to return true if a person from that state.
+ */
+
+var employee = {
+  name : 'John',
+  age : 40,
+  designation : 'Manager',
+  address : {
+      city : 'Hyderabad',
+      state : 'Telangana',
+      country : 'India'
+  },
+  isFromState : function(state) {
+        return state.toUpperCase() === this.address.state.toUpperCase();
+  }
+};
+
+console.log('Is from TS ? ' + employee.isFromState('tELanGanA'));
+
+// Default Function Arguments (arguments)
+function defaultArgs() {
+    console.log(arguments);
+}
+defaultArgs('John',40,'Manager');
+
+
+// MDN documentation for Array:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array 
+
+</pre>
+</div>
+<div class="box">
+<h3>Math Objects</h3>
+<pre> 
+/* ------------------------------------------------------------------
+                            Math Object Examples
+ -------------------------------------------------------------------- */
+
+// Math PI
+var piValue = Math.PI;
+console.log('piValue : ' + piValue);
+
+// Math sqrt
+var sqrt = Math.sqrt(144);
+console.log('sqrt of 144 is : ' + sqrt);
+
+// find the min of 4 numbers
+var min = Math.min(14,56,8987,6546,49,765,46,4,84,351);
+console.log('Min value : ' + min);
+
+// find the Max of 4 numbers
+var max = Math.max(14,56,8987,6546,49,765,46,4,84,351);
+console.log('Max value : ' + max);
+
+// find the 'x' to the power of 'y' value, ex: 2^4
+var pow = Math.pow(2,4);
+console.log('2 ^ 4 is : ' + pow);
+
+// generate the random numbers from 0 to 100000
+var numbr = Math.round(Math.random() * 100000);
+console.log(numbr);
+
+/* For more details about Math Object, please have a look at
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+*/
+
+/* ------------------------------------------------------------------
+                            Date Object Examples
+ -------------------------------------------------------------------- */
+
+// get today's date
+var today = new Date();
+console.log(today);
+
+// Get proper date
+var date = new  Date();
+var myDate = date.getDate() + "-" + (date.getMonth()+1) + "-" + date.getFullYear();
+console.log(myDate);
+
+// Display a Digital Clock on the web page
+function digitalClock() {
+    var today = new Date();
+    var currentTime = today.toLocaleTimeString();
+    document.querySelector('#time').textContent = currentTime;
+}
+setInterval(digitalClock,1000);
+
+/* For More Details about Date() please have a look at
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+*/
+
+/* ------------------------------------------------------------------
+                            Number Object Examples
+ -------------------------------------------------------------------- */
+
+var minValue = Number.MIN_VALUE;
+console.log(minValue);
+
+var maxvalue = Number.MAX_VALUE;
+console.log(maxvalue);
+
+var num1 = 10.025223232;
+console.log(num1.toFixed(2));
+
+var strNum1 = '124.125';
+console.log('value : ' + strNum1 + ' type ' + typeof strNum1);
+
+// convert String to Number
+var num2 = parseFloat(strNum1);
+console.log('value : ' + num2 + ' type ' + typeof num2);
+
+// convert number to string
+var str1 = num2.toString();
+console.log('value : ' + str1 + ' type ' + typeof str1);
+
+
+/* ------------------------------------------------------------------
+                            String Object Examples
+ -------------------------------------------------------------------- */
+
+var str = "Good Morning";
+
+console.log('Uppercase : ' + str.toUpperCase());
+
+console.log('Lowercase : ' + str.toLowerCase());
+
+console.log('Length : ' + str.length);
+
+console.log('char At 0 : ' + str.charAt(0));
+
+console.log('Substr : : ' + str.substr(0,4));
+
+console.log('Substr : ' + str.substr(5));
+
+// Count the number of '0's
+function countZeros(str) {
+    var count = 0;
+    for(var i=0; i<str.length; i++){
+        var ch = str.charAt(i);
+        if(ch === 'o'){
+            count++;
+        }
+    }
+    return count;
+}
+str = "Good Morning";
+console.log('Count is : ' + countZeros(str));
+
+// reverse the String
+function reverseStr(str) {
+    var tempStr = '';
+    for(var i = str.length-1; i>=0 ; i--){
+        tempStr += str.charAt(i);
+    }
+    return tempStr;
+}
+
+str = "Good Morning";
+console.log('Reverse is : ' + reverseStr(str));
+
+// palindrome function
+function ispalindrome(str) {
+    return str === reverseStr(str);
+}
+str = "ABCBA";
+console.log('Is palindrome : ' + ispalindrome(str));
+
+// get String Number
+var array = ['ZERO', 'ONE' , 'TWO' , 'THREE' , 'FOUR' , 'FIVE' , 'SIX' , 'SEVEN' , 'EIGHT' , 'NINE'];
+function getStringNumber(str) {
+    var tempStr = '';
+    for(var i =0; i<str.length; i++){
+        var index = parseInt(str.charAt(i));
+        tempStr += array[index] + ' ';
+    }
+    return tempStr;
+}
+str = '54656';
+console.log(str + " -> " + getStringNumber(str));
+
+// reverse the String
+function reverseStr(str) {
+    var tempStr = '';
+    for(var i = str.length-1; i>=0 ; i--){
+        tempStr += str.charAt(i);
+    }
+    return tempStr;
+}
+</pre>
+</div>
+
+<div class="box">
+<h3>DOM Manipulation</h3>
+<pre> 
+// h2Element Changes
+//  to get the element
+var h2Element = document.querySelector('h2');
+
+// to get the content
+var msg = h2Element.textContent;
+console.log(msg);
+
+// to set the content
+h2Element.textContent = 'Good Morning';
+
+// to apply the styles
+h2Element.style.backgroundColor = 'orangered';
+h2Element.style.color = 'white';
+h2Element.style.boxShadow = '0 0 15px black';
+
+
+// Image Element Changes
+
+// get the image element
+var imageElement = document.querySelector('#image');
+
+// to get an attribute
+var imageAddress = imageElement.getAttribute('src');
+console.log(imageAddress);
+
+// to set an attribute
+imageElement.setAttribute('src','../img/forest.jpg');
+
+// to apply styles
+imageElement.style.borderRadius = '50%';
+imageElement.style.boxShadow = '0 0 15px black';
+
+// H1Element Changes
+
+// to get the element
+var h1Element = document.querySelector('#greet');
+
+h1Element.textContent = reverseStr('Good Morning');
+
+// to apply styles
+h1Element.style.backgroundColor = 'forestgreen';
+h1Element.style.textAlign = 'center';
+h1Element.style.color = 'white';
+h1Element.style.padding = '10px';
+h1Element.style.boxShadow = '0 0 15px black';
+
+</pre>
+</div>
+<div class="box">
+<h3>Form Validations</h3>
+<pre>
+// Get the Input Elements
+
+var userNameElement = document.querySelector('#username');
+var emailElement = document.querySelector('#email');
+var passwordElement = document.querySelector('#password');
+var confirmPasswordElement = document.querySelector('#password_confirm');
+
+// Get the Error Elements
+var userNameErrorElement = document.querySelector('#name_error');
+var emailErrorElement = document.querySelector('#email_error');
+var passwordErrorElement = document.querySelector('#password_error');
+
+// blur Event for UserName Field
+userNameElement.addEventListener('blur',function() {
+    // Clear the Error Message
+    clearErrorMessage(userNameElement,userNameErrorElement);
+});
+
+// blur Event for Email Field
+emailElement.addEventListener('blur',function() {
+    // Clear the Error Message
+    clearErrorMessage(emailElement,emailErrorElement);
+});
+
+// blur Event for password Field
+passwordElement.addEventListener('blur',function() {
+    // Clear the Error Message
+    clearErrorMessage(passwordElement,passwordErrorElement);
+    clearErrorMessage(confirmPasswordElement,passwordErrorElement);
+});
+
+// blur Event for confirm Password Field
+confirmPasswordElement.addEventListener('blur',function() {
+    // Clear the Error Message
+    clearErrorMessage(passwordElement,passwordErrorElement);
+    clearErrorMessage(confirmPasswordElement,passwordErrorElement);
+});
+
+// validate Function
+function validate() {
+    var isFormValid = false;
+    var message = '';
+
+    // Required UserName Validation
+    if(userNameElement.value === ''){
+        message = 'UserName is Required';
+        displayErrorMessage(userNameElement,userNameErrorElement,message);
+        isFormValid = false;
+        return isFormValid;
+    }
+
+    // UserName Length Validation
+    if(userNameElement.value.length < 5){
+        message = 'Enter at least 5 letters';
+        displayErrorMessage(userNameElement,userNameErrorElement,message);
+        isFormValid = false;
+        return isFormValid;
+    }
+
+    // Pattern Match Validation for UserName
+    if(!userNameElement.value.match(/^[A-Za-z0-9_]{1,15}$/)){
+        message = 'RegExp is Not Matched';
+        displayErrorMessage(userNameElement,userNameErrorElement,message);
+        isFormValid = false;
+        return isFormValid;
+    }
+
+    // Required Email Validation
+    if(emailElement.value === ''){
+        message = 'Email is Required';
+        displayErrorMessage(emailElement,emailErrorElement,message);
+        isFormValid = false;
+        return isFormValid;
+    }
+
+    // Required Password Validation
+    if(passwordElement.value === ''){
+        message = 'Password is Required';
+        displayErrorMessage(passwordElement,passwordErrorElement,message);
+        isFormValid = false;
+        return isFormValid;
+    }
+
+    // Required Confirm Password Validation
+    if(confirmPasswordElement.value === ''){
+        message = 'ConfirmPassword is Required';
+        displayErrorMessage(confirmPasswordElement,passwordErrorElement,message);
+        isFormValid = false;
+        return isFormValid;
+    }
+
+    // Passwords match validation
+    if(passwordElement.value !== confirmPasswordElement.value){
+        message = "Passwords didn't Match";
+        displayErrorMessage(passwordElement,passwordErrorElement,message);
+        displayErrorMessage(confirmPasswordElement,passwordErrorElement,message);
+        isFormValid = false;
+        return isFormValid;
+    }
+
+
+    if(isFormValid){
+        return isFormValid;
+    }
+    else{
+        alert('Form Submitted Successfully');
+        return true;
+    }
+}
+
+// Function for display Error Message
+function displayErrorMessage(inputElement,errorElement,message) {
+    inputElement.style.backgroundColor = 'lightsalmon';
+    inputElement.style.borderColor = 'red';
+    inputElement.style.boxShadow = '0 0 15px red';
+    errorElement.textContent = message;
+    errorElement.style.color = 'red';
+}
+
+// Clear Error Messages
+function clearErrorMessage(inputElement,errorElement) {
+    inputElement.style.backgroundColor = 'white';
+    inputElement.style.borderColor = 'gray';
+    inputElement.style.boxShadow = '0 0 0px white';
+    errorElement.textContent = '';
+}
+</pre>
+</div>
+
+<div class="box">
+<h3>Scopes</h3>
+<pre>
+// Block scoping for if block
+var dept = 'Engineering';
+if(dept === 'Engineering'){
+    var job = 'Software';
+}
+console.log(dept); // Engineering
+console.log(job); // Software
+
+//Block scoping for FOR Loop
+for(var i=0; i<=10; i++){
+    // statements
+}
+console.log(i); // 11
+
+// Function Scoping
+function greet() {
+    var greeting = 'Good Morning';
+}
+greet();
+//console.log(greeting); // RE: 'greeting' is not defined
+
+// IIFE example
+(function(name) {
+    var greetMsg = "Good Morning " + name;
+    console.log(greetMsg);
+})('John');
+
+// Read and Write Operations for variables
+var name = 'John'; // Write Operation
+console.log(name); // READ Operation
+
+// Scope Example 1
+var a = 10; // global scope variable
+function greetOuter() {
+    var b = 20; // child scope variable
+    function greetInner() {
+        var c = 30; // grand-child scope variable
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    }
+    greetInner();
+}
+greetOuter();
+
+// Creation of an Employee Object
+var createEmployee = function(name,age,desg) {
+    var obj = {};
+    obj.name = name;
+    obj.age = age;
+    obj.desg = desg;
+    return obj;
+};
+
+var employee1 = createEmployee('John',40,'Manager');
+console.log(employee1);
+
+var employee2 = createEmployee('Rajan',30,'Team Lead');
+console.log(employee2);
+
+</pre>
+</div>
+<div class="box">
+<h3>Compilation & Interpretation</h3>
+<pre>
+// Compilation step
+
+var a = 10;
+function  myFn() {
+    var b = 20;
+    var c = 30;
+    console.log(a + b + c);
+}
+myFn();
+
+// Global Scope Problem
+
+var a = 10;
+function myFn() {
+    var b = a;
+    console.log(b);
+    c = 100;
+}
+
+myFn();
+
+// Coding Exercises for Compilation & Interpretation
+var  a = 10;
+function outer(){
+    var b = a;
+    console.log(b);
+    function inner() {
+        var b = 20;
+        var c = b;
+        console.log(c);
+    }
+    inner();
+}
+outer();
+
+// Coding Exercises for Compilation & Interpretation
+var  a = 10;
+function outer(){
+    var b = a;
+    console.log(b);
+    function inner() {
+        var c = b;
+        console.log(c);
+        var b = 20;
+    }
+    inner();
+}
+outer();
+
+//simple code
+console.log(a); // undefined
+var a = 10;
+
+// Hoisting in JavaScript for variables
+a = 10;
+console.log(b);
+c++;
+
+var a;
+var b;
+var c;
+
+// Hoisting in JS for Functions
+myFn();
+
+function myFn() {
+    console.log("myFn");
+}
+
+//Hoisting for JS Recursive functions
+function recusion() {
+    // some serious code
+    recusion();
+}
+
+// Hoisting for Function Expressions (not possible)
+myFnA();
+
+var myFnA = function () {
+    console.log("Function Expression");
+};
+
+//using Strict Mode ("use strict";)
+
+var myName1 = "";
+myname1 = "Ganesh";
+console.log(myName1);
+</pre>
+</div>
+<div class="box">
+<h3>Closures</h3>
+<pre>
+// Closures Concept of JavaScript
+var a = 10;
+function greetOuter(){
+    var b = 20;
+    var greetInner = function(){
+        var c = 30;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    };
+    return greetInner;
+}
+function greetEngine(fName){
+    fName();
+}
+var greet = greetOuter();
+greetEngine(greet);
+</pre>
+</div>
+<div class="box">
+<h3>Event Handlers</h3>
+<pre>
+// Get the h2 Element
+var h2Element = document.querySelector('#wish-msg');
+
+// GM function
+function sayGoodMorning() {
+    displayWishMessage('Good Morning','forestgreen');
+}
+
+// GA Function
+function sayGoodAfternoon() {
+    displayWishMessage('Good Afternoon','blue');
+}
+
+// GE Function
+function sayGoodEvening() {
+    displayWishMessage('Good Evening','orangered');
+}
+
+// GN Function
+function sayGoodNight() {
+    displayWishMessage('Good Night','darkred');
+}
+
+// display Wish Message
+function displayWishMessage(message,color) {
+    h2Element.textContent = message;
+    h2Element.style.backgroundColor = color;
+    h2Element.style.color = 'white';
+    h2Element.style.textAlign = 'center';
+    h2Element.style.padding = '10px';
+    h2Element.style.boxShadow = '0 0 15px ' + color;
+}
+
+// get the Image Element
+var imageElement = document.querySelector('#myImage');
+
+function facebook() {
+    imageElement.setAttribute('src','../img/facebook.jpg');
+}
+function forest() {
+    imageElement.setAttribute('src','../img/forest.jpg');
+}
+function youtube() {
+    imageElement.setAttribute('src','../img/youtube.jpg');
+}
+function corporate() {
+    imageElement.setAttribute('src','../img/corporate.jpg');
+}
+function water() {
+    imageElement.setAttribute('src','../img/water.jpg');
+}
+
+// JavaScript Event Listeners
+
+// GM button
+var GmButton = document.querySelector('#gm');
+GmButton.addEventListener('click',function() {
+    displayWishMessage('Good Morning','forestgreen');
+});
+
+// GA button
+var GAButton = document.querySelector('#ga');
+GAButton.addEventListener('click',function() {
+    displayWishMessage('Good Afternoon','blue');
+});
+
+// GE button
+var GEButton = document.querySelector('#ge');
+GEButton.addEventListener('click',function() {
+    displayWishMessage('Good Evening','orangered');
+});
+
+// GN button
+var GNButton = document.querySelector('#gn');
+GNButton.addEventListener('click',function() {
+    displayWishMessage('Good Night','blue');
+});
+
+// Event Listener for the text box
+var inputElement = document.querySelector('#user');
+inputElement.addEventListener('keyup',function() {
+    var username = inputElement.value;
+    document.querySelector('#user-text').textContent = username;
+});
+
+</pre>
+</div>
+<div class="box">
+<h3>Object creation Patterns</h3>
+<pre>
+ 1. Constructor Pattern
+ 2. Factory Pattern
+ 3. Prototype Pattern
+ 4. Dynamic Prototype Pattern
+ 
+ 
+	Factory Pattern
+	---------------
+	var peoplefactory = function(name,age,state){
+		var temp = {};// or new Object()
+		temp.age = age;
+		temp.name = name;
+		temp.state = state;
+		temp.printPerson = function(){
+			console.log(name+':'+age+':'+state);
+		}
+		return temp;
+	}
+	var person1 = peoplefactory('Ganesh', 25, 'AP');
+	
+	
+	Constructor Pattern
+	-------------------
+	var peopleConstuctor = function(name, age, state){
+			this.name = name;
+			this.age  = age;
+			this.state = state;
+			
+			this.printPerson = function(){
+				console.log(this.name+':'+this.age+':'+this.state);
+			};
+	}
+	
+	var person1 = new peopleConstuctor('Ganesh', 25, 'AP');
+	var person2 = new peopleConstuctor('Suresh', 25, 'AP');
+	
+	person1.printPerson();
+	person2.printPerson();
+	
+	Prototype Patterns
+	------------------
+	var peopleProto = function(){
+	
+	};
+	peopleProto.prototype.age = 0;
+	peopleProto.prototype.name = 'no name';
+	peopleProto.prototype.city = 'no city';
+	peopleProto.prototype.printPerson = function(){
+		console.log(this.name + ':' + this.age +':'+this.city);
+	}
+	var person1 = new peopleProto();
+	person1.name = 'Ganesh';
+	person1.age = 26;
+	person1.city = 'Hyderabad';
+	person1.printPerson();
+	
+	Dynamic Prototype Pattern
+	-------------------------
+	var peopleDynamicProto = function(name , age, state){
+		this.age = age;
+		this.name = name;
+		this.state = state;	
+		
+		if(typeof this.printPerson != 'function'){
+			peopleDynamicProto.prototype.printPerson = function(){
+				console.log(this.name + ':' + this.age +':'+this.state);
+			}
+		}
+	};
+	
+	var person1 = new peopleDynamicProto();
+	person1.printPerson();
+</pre>
+</div>
+<div class="box">
+<h3>Callback functions</h3>
+<pre>
+	let x = function(){
+	
+	}
+	let y = function(callback){
+		console.log('do something');
+		callback();
+	}
+	y(x);
+	
+	let clac = function(num1, num2, calctype){
+		if(calctype == 'add'){
+			return num1 + num2;
+		}else if(calctype == 'multiply'){
+			return num1 * num2;
+		}
+	}
+	console.log(clac(2,3,'add'));
+	
+	
+	let add = function(a, b){
+		return a + b;
+	}
+	let multiply = function(a, b){
+		return a * b;
+	}
+	let calc = function(a, b, callback){
+		return callback(a,b);
+	}
+	console.log(calc(3,6, add));
+	
+</pre>
+</div>
+<div class="box">
+<h3>call & apply && bind</h3>
+<pre>	
+	var obj = {num : 2};
+	call
+	------
+		var addtoThis = function(a,b){
+			return this.num + a + b;
+		}
+		console.log(addtoThis.call(obj, 2, 4)); // functionname(obj, funcitonarguments)
+	
+	apply
+	------
+		var arr = [1,2];
+		console.log(addtoThis.apply(obj, arr)); 
+	
+	bind
+	-----
+		var bound = addtoThis.bind(obj);
+		console.log(bound(1,7));
+
+	</pre>
+</div>
+<div class="box">
+<h3>Prototype inheritance</h3>
+<pre>		
+   Prototype - By default every function has a property called property	, bydefault it is empty
+   var x = function(j){
+	this.i = 0;
+	this.j = j;
+   }
+   x.prototype.getJ = function(){
+	return this.j;
+   }
+   var res = x.getJ();
+   
+   
+   
+   var Job = function(){
+	this.pays = true;
+   }
+   Job.prototype.print = function(){
+	console.log(this.pays?'please hire':'no thanks');
+   }
+   var Techjob = function(title, pays){ 
+		Job.call(this);
+   
+		this.title = title;
+		this.pays = pays;
+   }
+   Techjob.prototype = Object.create(Job.prototype);
+   Techjob.prototype.constructor = Techjob;
+   
+   var softwarePosition = new Techjob('Javascript Programmar',true);
+   console.log(softwarePosition.print());
+   </pre>
+</div>
+<div class="box">
+<h3>Method Chaining</h3>
+<pre>   
+	var obj = function(){
+		this.i = 0;
+		this.add = function(i){
+			this.i += i;
+			return this;
+		}
+		this.subtract = function(i){
+			this.i -= i;
+			return this;
+		}
+	}
+	
+	var x = new obj();
+	console.log(x.add(3).subtract(2)); 
+	// if add fails gives undefined so subtract also 
+	failed that why we have to return this
+	
+</pre>
+</div>
+<div class="box">
+<h3>ES6</h3>
+<pre> 	
+	Arrow Functions
+	----------------
+	'use strict'; 
+
+	var getA = function(a){
+		return a;
+	}
+	let getA = a => a;
+	console.log(getA(1)); // 1
+	
+	let square = (a) => {return a*a};
+	console.log(square(2)); // 1
+		</pre>
+		</div>
+	</body>
+</html>
+
+
+	
+
+	
