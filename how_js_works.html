@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Js Execution</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+	<body>
+		<h3>Javascript Execution</h3>
+		<pre>
+			1. Our Javascript Code  
+				---> parse code by using data structure called Abstract Syntax Tree(browser engine - every browser has its own engine) 
+					---> converting to machine code 
+						---> code runs
+
+
+			2. Execution Context - A box or container or a wrapper which stores variables and in which a piece of code is evaluated and executed
+
+			3. Global Execution Context associated with window object, not inside any function.
+			lastname === window.lastname (true)
+
+			4.
+			  => Execution context
+			     -- Variable Object
+			     	- The argument object created, containing all the aguments that were passed into the function.
+			     	- Code is scanned for function declorations: for each function,  a property is created in variable object, pointing to the function.
+			     	- Code is scanned for variable declorations: for each variable, a property is created in variable object and set to undefined.
+			     -- Scope Chain
+			     	- where can we access certain variable
+			     	- Each new function creates a scope
+			     	- Lexical scoping: a function that is lexically within another function gets access to the scope of the outer function.
+			     -- This variable
+			     	- Regular function call : The this keyword points at the global object(the window object in the browser)
+			     	- Method call : the this variable points to the object that is calling the method.
+
+		</pre>
+		<script type="text/javascript">
+			
+		</script>
+	</body>
+</html>

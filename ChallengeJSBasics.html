@@ -32,28 +32,48 @@
 		console.log(John);
 		</pre>
 		<script type="text/javascript">
-			var John = {
-				fullName : 'John',
-				bills : [124,48,268,180,42],
-				calcTip : function(){
-					this.tips = [];
-					this.totalAmount = [];
-					for(var i=0;i<this.bills.length;i++){
-						if(this.bills[i] < 50){
-							this.tips.push(this.bills[i]*(20/100));
-							this.totalAmount.push(this.bills[i]+this.bills[i]*(20/100))
-						}if(this.bills[i]> 50 && this.bills[i]< 200){
-							this.tips.push(this.bills[i]*(15/100));
-							this.totalAmount.push(this.bills[i]+this.bills[i]*(15/100)) 
-						}if(this.bills[i] > 200){
-							this.tips.push(this.bills[i]*(10/100)); 
-							this.totalAmount.push(this.bills[i]+this.bills[i]*(15/100))
-						}
-					}
-				}
-			};
-			John.calcTip();
-			console.log(John);
+			<!-- var John = { -->
+				<!-- fullName : 'John', -->
+				<!-- bills : [124,48,268,180,42], -->
+				<!-- calcTip : function(){ -->
+					<!-- this.tips = []; -->
+					<!-- this.totalAmount = []; -->
+					<!-- for(var i=0;i<this.bills.length;i++){ -->
+						<!-- if(this.bills[i] < 50){ -->
+							<!-- this.tips.push(this.bills[i]*(20/100)); -->
+							<!-- this.totalAmount.push(this.bills[i]+this.bills[i]*(20/100)) -->
+						<!-- }if(this.bills[i]> 50 && this.bills[i]< 200){ -->
+							<!-- this.tips.push(this.bills[i]*(15/100)); -->
+							<!-- this.totalAmount.push(this.bills[i]+this.bills[i]*(15/100))  -->
+						<!-- }if(this.bills[i] > 200){ -->
+							<!-- this.tips.push(this.bills[i]*(10/100));  -->
+							<!-- this.totalAmount.push(this.bills[i]+this.bills[i]*(15/100)) -->
+						<!-- } -->
+					<!-- } -->
+				<!-- } -->
+			<!-- }; -->
+			<!-- John.calcTip(); -->
+			<!-- console.log(John); -->
+			
+			
+			 const first = () =>{
+				console.log('first');
+				second();
+				console.log('final');
+			 }
+			 
+			 const second = () => {
+				console.log('second');
+			 }
+			 first();
+			 
+			 
+			 function test(age, name){
+				console.log('test');
+				console.log(age+''+name);
+				//console.log(name);
+			 }
+			 test(23,'ramesh');
 		</script>
 	</body>
 </html>

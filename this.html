@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Js this keyword</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+	<body>
+		<h3>Js this keyword</h3>
+		<pre>
+		console.log(this);
+
+		calcAge();
+		function calcAge(){
+			console.log(this);// points to the window object
+		}
+
+		var obj = {
+			name : 'ganesh',
+			yearOfBirth: 1992,
+			calculateAge: function(){
+				console.log(this);
+				console.log(2018- this.yearOfBirth);
+				innerFunction();
+				function innerFunction(){
+					console.log(this);
+				} 
+			}
+		};
+		obj.calculateAge(); // in this case this refers to the object
+
+		var mike = {
+			name: 'mike'
+		};
+		mike.calculateAge = obj.calculateAge;
+		mike.calculateAge();	
+		</pre>
+		<script type="text/javascript">
+		console.log(this);
+
+		calcAge();
+		function calcAge(){
+			console.log(this);// points to the window object
+		}
+
+		var obj = {
+			name : 'ganesh',
+			yearOfBirth: 1992,
+			calculateAge: function(){
+				console.log(this);
+				console.log(2018- this.yearOfBirth);
+				innerFunction();
+				function innerFunction(){
+					console.log(this);
+				} 
+			}
+		};
+		obj.calculateAge(); // in this case this refers to the object
+
+		var mike = {
+			name: 'mike'
+		};
+		mike.calculateAge = obj.calculateAge;
+		mike.calculateAge();
+		</script> 
+	</body>
+</html>

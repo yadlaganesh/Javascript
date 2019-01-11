@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Js Scope</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+	<body>
+		<h3>Js Scope</h3>
+		<pre>
+		var a = 'Hi';
+		first();
+
+		function first(){ 
+			var b = 'Hello';
+			second();
+
+			function second(){
+				var c = 'Bye';
+				console.log(a+"-"+b+"-"+c);
+				third();
+			}
+		}
+		function third(){
+			console.log(c); // not defined
+			var d = 'ganesh';
+		}
+		</pre>
+		<script type="text/javascript">
+		var a = 'Hi';
+		first();
+
+		function first(){ 
+			var b = 'Hello';
+			second();
+
+			function second(){
+				var c = 'Bye';
+				console.log(a+"-"+b+"-"+c);
+				third();
+			}
+		}
+		function third(){
+			console.log(c); // not defined
+			var d = 'ganesh';
+		}
+		</script>
+	</body>
+</html>

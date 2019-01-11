@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Js Hoisting</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	</head>
+	<body>
+		<h3>Js Hoisting</h3>
+		<pre>
+		//function decloration
+		calculateAge(1992); // it works
+		function calculateAge(year){
+			console.log(2018-year);
+		}
+
+		//function expression
+		retrirement(1992); // for function expression hosting won't works
+		var retrirement = function(year){
+			console.log(65-(2018- year)); 
+		}
+		retrirement(1992); // for function expression hosting  works
+
+		
+		console.log(age); // undefined
+		var age =25;
+
+		function foo(){
+			console.log(age); // undefined
+			var age = 65;
+			console.log(age); // 65
+		}
+		foo()
+		console.log(age); // 25	
+		</pre>
+		<script type="text/javascript">
+			//function decloration
+			calculateAge(1992); // it works
+			function calculateAge(year){
+				console.log(2018-year);
+			}
+
+			//function expression
+			retrirement(1992); // for function expression hosting won't works
+			var retrirement = function(year){
+				console.log(65-(2018- year)); 
+			}
+			retrirement(1992); // for function expression hosting  works
+
+			
+			console.log(age); // undefined
+			var age =25;
+
+			function foo(){
+				console.log(age); // undefined
+				var age = 65;
+				console.log(age); // 65
+			}
+			foo()
+			console.log(age); // 25
+		</script>
+	</body>
+</html>
